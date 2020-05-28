@@ -13,7 +13,7 @@ public class ModeratorOptions implements ForumOptions {
 
     @Override
     public String downgradeUserType(Forum forum) {
-        forum.setForumOptionsState(forum.getMemberOptions());
+        forum.setForumOptionsState(new MemberOptions());
         return "U bent van Moderator naar Member overgestapt.";
     }
 
