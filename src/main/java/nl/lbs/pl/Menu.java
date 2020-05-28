@@ -35,19 +35,19 @@ public class Menu {
         int menuChoice = captureInt(menuInput);
         switch (menuChoice) {
             case 1:
-                resultString = forum.getForumOptionsState().upgradeUserType(forum);
+                resultString = forum.upgradeUserType(forum);
                 System.out.println(resultString);
                 break;
             case 2:
-                resultString = forum.getForumOptionsState().downgradeUserType(forum);
+                resultString = forum.downgradeUserType(forum);
                 System.out.println(resultString);
                 break;
             case 3:
-                resultString = forum.getForumOptionsState().addComment();
+                resultString = forum.addComment();
                 System.out.println(resultString);
                 break;
             case 4:
-                resultString = forum.getForumOptionsState().addTopic();
+                resultString = forum.addTopic();
                 System.out.println(resultString);
                 break;
             case 5:
