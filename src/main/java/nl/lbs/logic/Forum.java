@@ -4,7 +4,7 @@ import nl.lbs.logic.config.GuestOptions;
 import nl.lbs.logic.config.MemberOptions;
 import nl.lbs.logic.config.ModeratorOptions;
 
-public class Forum implements ForumOptions {
+public class Forum {
     private ForumOptions forumOptionsState;
 
     public Forum(ForumOptions _forumOptionsState){
@@ -15,23 +15,19 @@ public class Forum implements ForumOptions {
         this.forumOptionsState = newState;
     }
 
-    @Override
-    public String upgradeUserType(Forum forum) {
-        return this.forumOptionsState.upgradeUserType(forum);
+    public ForumOptions getForumOptionsState(){
+        return forumOptionsState;
     }
 
-    @Override
-    public String downgradeUserType(Forum forum) {
-        return this.forumOptionsState.downgradeUserType(forum);
+    public ForumOptions getGuestOptions() {
+        return new GuestOptions();
     }
 
-    @Override
-    public String addComment() {
-        return this.forumOptionsState.addComment();
+    public ForumOptions getMemberOptions() {
+        return new MemberOptions();
     }
 
-    @Override
-    public String addTopic() {
-        return this.forumOptionsState.addTopic();
+    public ForumOptions getModeratorOptions() {
+        return new ModeratorOptions();
     }
 }

@@ -6,7 +6,7 @@ import nl.lbs.logic.ForumOptions;
 public class GuestOptions implements ForumOptions {
     @Override
     public String upgradeUserType(Forum forum) {
-        forum.setForumOptionsState(new MemberOptions());
+        forum.setForumOptionsState(forum.getMemberOptions());
         return "U bent van Guest naar Member opgewaardeerd";
     }
 

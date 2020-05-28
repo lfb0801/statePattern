@@ -6,13 +6,13 @@ import nl.lbs.logic.ForumOptions;
 public class MemberOptions implements ForumOptions {
     @Override
     public String upgradeUserType(Forum forum) {
-        forum.setForumOptionsState(new ModeratorOptions());
+        forum.setForumOptionsState(forum.getModeratorOptions());
         return "U bent van Member naar Moderator opgewaardeerd";
     }
 
     @Override
     public String downgradeUserType(Forum forum) {
-        forum.setForumOptionsState(new GuestOptions());
+        forum.setForumOptionsState(forum.getGuestOptions());
         return "U bent van Member naar Guest overgestapt.";
     }
 
