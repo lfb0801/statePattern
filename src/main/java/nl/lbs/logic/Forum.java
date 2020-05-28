@@ -7,9 +7,9 @@ import nl.lbs.logic.config.ModeratorOptions;
 public class Forum {
     private ForumOptions forumOptionsState;
 
-    public Forum(){
+    public Forum(ForumOptions _forumOptionsState){
         // stel een start status in
-        forumOptionsState = new GuestOptions();
+        forumOptionsState = _forumOptionsState;
     }
 
     public void setForumOptionsState(ForumOptions newState){
