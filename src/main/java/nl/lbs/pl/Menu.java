@@ -73,13 +73,9 @@ public class Menu {
                     System.out.println("U koos: " + menuIntvoer);
                 }
             } catch (InputMismatchException | NumberFormatException exception) {
-                // ongeldige invoer bericht
                 System.out.println("Helaas, uw invoer was niet geldig, probeer alstublieft opnieuw.");
-                // voeg de error toe
                 System.out.println(exception.getMessage());
-                // voor overtollig toetsen af
                 inputVanMenu.nextLine();
-                // biedt aan nog een te proberen
                 System.out.println("Voer alstublieft uw nummer in en druk op enter. ");
             }
         }
