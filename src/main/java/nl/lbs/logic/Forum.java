@@ -2,21 +2,13 @@ package nl.lbs.logic;
 
 public class Forum {
     private ForumOptions forumOptionsState;
-    private ForumOptions guest;
-    private ForumOptions member;
-    private ForumOptions moderator;
 
     public Forum(){
-        // start voor ieder gebruikersniveau de opties
-        guest = new GuestOptions();
-        member = new MemberOptions();
-        moderator = new ModeratorOptions();
-
         // stel een start status in
-        forumOptionsState = guest;
+        forumOptionsState = new GuestOptions();
     }
 
-    public void setForumOptionsState(ForumOptions newState){
+    void setForumOptionsState(ForumOptions newState){
         this.forumOptionsState = newState;
     }
 
@@ -24,15 +16,15 @@ public class Forum {
         return forumOptionsState;
     }
 
-    public ForumOptions getGuestOptions() {
-        return guest;
+    ForumOptions getGuestOptions() {
+        return new GuestOptions();
     }
 
-    public ForumOptions getMemberOptions() {
-        return member;
+    ForumOptions getMemberOptions() {
+        return new MemberOptions();
     }
 
-    public ForumOptions getModeratorOptions() {
-        return moderator;
+    ForumOptions getModeratorOptions() {
+        return new ModeratorOptions();
     }
 }

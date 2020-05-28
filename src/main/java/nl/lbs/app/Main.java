@@ -13,13 +13,12 @@ public class Main {
 
         // start het menu uit presentation layer
         Menu menu = new Menu();
+
         Scanner menuInput = new Scanner(System.in);
         // loop om het menu te verversen na input en input op te vangen tot EndMenu waar is
         while (!menu.isEndMenu()){
             menu.display();
             menu.interact(forum, menuInput);
         }
-
-
     }
 }

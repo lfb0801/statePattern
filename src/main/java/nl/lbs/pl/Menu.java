@@ -9,7 +9,7 @@ public class Menu {
 
     private boolean EndMenu;
 
-    public Menu (){
+    public Menu() {
         EndMenu = false;
     }
 
@@ -17,7 +17,7 @@ public class Menu {
         return EndMenu;
     }
 
-    public void display(){
+    public void display() {
         // Weergave forum
         System.out.println("==================================== Dieren Forum ====================================");
         System.out.println("Topic 01 - Hamster vermist! --------------------- gepost door LB ");
@@ -31,23 +31,28 @@ public class Menu {
         System.out.println("==================================== Kies alstublieft een optie ====================================");
     }
 
-    public void interact(Forum forum, Scanner menuInput){
+    public void interact(Forum forum, Scanner menuInput) {
         String resultString;
-        int menuChoice = captureInt(menuInput, 1, 5);
+        int menuChoice = captureInt(menuInput);
         switch (menuChoice) {
-            case 1: resultString = forum.getForumOptionsState().upgradeUserType(forum);
+            case 1:
+                resultString = forum.getForumOptionsState().upgradeUserType(forum);
                 System.out.println(resultString);
                 break;
-            case 2: resultString = forum.getForumOptionsState().downgradeUserType(forum);
+            case 2:
+                resultString = forum.getForumOptionsState().downgradeUserType(forum);
                 System.out.println(resultString);
                 break;
-            case 3: resultString = forum.getForumOptionsState().addComment();
+            case 3:
+                resultString = forum.getForumOptionsState().addComment();
                 System.out.println(resultString);
                 break;
-            case 4: resultString = forum.getForumOptionsState().addTopic();
+            case 4:
+                resultString = forum.getForumOptionsState().addTopic();
                 System.out.println(resultString);
                 break;
-            case 5: EndMenu = true;
+            case 5:
+                EndMenu = true;
                 break;
             default:
                 System.out.println("De interact methode is op een punt waar het niet hoort te zijn.");
@@ -55,9 +60,11 @@ public class Menu {
 
     }
 
-    public int captureInt(Scanner inputVanMenu, int laagsteOptie, int hoogsteOptie){
+    private int captureInt(Scanner inputVanMenu) {
         int menuIntvoer = -1;
-        while ( (menuIntvoer < laagsteOptie || menuIntvoer > hoogsteOptie) && inputVanMenu.hasNext()) {
+        int laagsteOptie = 1;
+        int hoogsteOptie = 5;
+        while ((menuIntvoer < laagsteOptie || menuIntvoer > hoogsteOptie) && inputVanMenu.hasNext()) {
             try {
                 // catch input
                 menuIntvoer = inputVanMenu.nextInt();
