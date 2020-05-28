@@ -1,4 +1,7 @@
-package nl.lbs.logic;
+package nl.lbs.logic.config;
+
+import nl.lbs.logic.Forum;
+import nl.lbs.logic.ForumOptions;
 
 public class GuestOptions implements ForumOptions {
     @Override
