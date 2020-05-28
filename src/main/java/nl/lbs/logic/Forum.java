@@ -8,7 +8,6 @@ public class Forum {
     private ForumOptions forumOptionsState;
 
     public Forum(ForumOptions _forumOptionsState){
-        // stel een start status in
         forumOptionsState = _forumOptionsState;
     }
 

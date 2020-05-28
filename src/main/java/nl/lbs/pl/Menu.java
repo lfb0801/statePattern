@@ -18,7 +18,6 @@ public class Menu {
     }
 
     public void display() {
-        // Weergave forum
         System.out.println("==================================== Dieren Forum ====================================");
         System.out.println("Topic 01 - Hamster vermist! --------------------- gepost door LB ");
         System.out.println("Topic 02 - Hamster in de aanbieding! ------------ gepost door MM ");
@@ -66,14 +65,11 @@ public class Menu {
         int hoogsteOptie = 5;
         while ((menuIntvoer < laagsteOptie || menuIntvoer > hoogsteOptie) && inputVanMenu.hasNext()) {
             try {
-                // catch input
                 menuIntvoer = inputVanMenu.nextInt();
 
                 if (menuIntvoer < laagsteOptie || menuIntvoer > hoogsteOptie) {
-                    // geef aan dat de invoer te laag was
                     System.out.println("Uw invoer was buiten de range, probeer alstublieft opnieuw.");
                 } else {
-                    // Bevestig de keus
                     System.out.println("U koos: " + menuIntvoer);
                 }
             } catch (InputMismatchException | NumberFormatException exception) {
