@@ -1,5 +1,9 @@
 package nl.lbs.logic;
 
+import nl.lbs.logic.config.GuestOptions;
+import nl.lbs.logic.config.MemberOptions;
+import nl.lbs.logic.config.ModeratorOptions;
+
 public class Forum {
     private ForumOptions forumOptionsState;
 
@@ -8,7 +12,7 @@ public class Forum {
         forumOptionsState = new GuestOptions();
     }
 
-    void setForumOptionsState(ForumOptions newState){
+    public void setForumOptionsState(ForumOptions newState){
         this.forumOptionsState = newState;
     }
 
@@ -16,15 +20,15 @@ public class Forum {
         return forumOptionsState;
     }
 
-    ForumOptions getGuestOptions() {
+    public ForumOptions getGuestOptions() {
         return new GuestOptions();
     }
 
-    ForumOptions getMemberOptions() {
+    public ForumOptions getMemberOptions() {
         return new MemberOptions();
     }
 
-    ForumOptions getModeratorOptions() {
+    public ForumOptions getModeratorOptions() {
         return new ModeratorOptions();
     }
 }
