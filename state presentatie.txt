@@ -1,0 +1,49 @@
+-------- State VS Strategy -----------
+Hoe en wanneer wil je gedragskeuze maken?
+State: vooraf, per state
+Strategy: ongeacht de state, vlak voor het uitvoeren
+
+Overlap - Workarounds:
+- doe je Strategy na met State? 
+--> Verander state voor ander gedrag. 
+----> Echter: heeft de state betekenis? gebouw in brand, security status etc.
+- doe je State na met Strategy?
+--> Raadpleeg een status variable / object voor je strategie keuze. 
+----> Echter: dan doe je al bijna State.
+
+
+--------- Verdere Inhoud -------------
+
+Wellicht voor de Waarom / Kritiek sheet:
+
+------- waarom niet toepassen -------------
+- Omdat zelf telkens een oplossing op maat maken, of het wiel opnieuw uitvinden, veel leuker is
+- Omdat er belangrijkere dingen in het leven zijn dan efficiënt werken
+- Als je collega's jouw cruciale code niet snappen, ben je onmisbaar
+ 
+------- Kritiek ------------
+- Design patronen vangen gebreken in de programmeertaal op
+- Als het patroon niet echt nodig is, kan het de code onnodig moeilijk maken
+
+
+-------- Uitvoering ---------------
+
+
+------- opsommingen ------------
+Misschien is echt een poll houden niet de beste tijdbesteding, maar wel een aardig idee
+Anders kan je het misschien brengen met:
+"onderaan zie je de namen, als je goed hebt voorbereid, weet je welke bij welke hoort"
+En het daar bij laten
+Of er één naam te weinig bij zetten, en kijken of iemand weet welke ontbreekt.
+Imho: de creational sheet is op die manier leuker dan simpelweg een opsomming zoals op de structural sheet.
+
+------------ taal --------------
+Kleine correcties:
+- geen ë of ï, wellicht bewuste keuze
+- Creational design patterns (laatste n ontbreekt)
+- Structural design patterns (laatste s ontbreekt, indien met opzet; wellicht weghalen bij Creational...)
+- Behavioral design patterns (idem)
+
+------------ beoordeling ---------
+5) Heeft ieder groepslid voldoende kennis van het gedemonstreerde pattern?
+--> als één iemand de pattern demonstreert, kan dit makkelijk scheef lopen
