@@ -11,7 +11,7 @@
         <surefire.plugin.version>2.22.2</surefire.plugin.version>
         <junit.version>5.5.2</junit.version>
         <slf4j.version>1.7.28</slf4j.version>
-        <logback.version>1.2.3</logback.version>
+        <logback.version>1.3.12</logback.version>
     </properties>
 
     <groupId>nl.lbs</groupId>
